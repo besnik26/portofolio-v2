@@ -19,15 +19,26 @@
       .info-section{
         p{
           color: #9e9e9e;
-          margin: 15px 0;
+          margin: 15px 0 35px 0;
         }
         .socials-div{
           display: flex;
+          align-items: center;
           column-gap: 10px;
           img{
             width: 27.5px;
             height: auto;
             cursor: pointer;
+          }
+          .cv-button{
+            color: white;
+            background-color: black;
+            padding: 5px 15px;
+            border-radius: 16px;
+            border: none;
+            display: flex;
+            align-items: center;
+            column-gap: 5px;
           }
         }
       }
