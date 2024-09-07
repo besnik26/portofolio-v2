@@ -1,4 +1,4 @@
-<div class="container-fluid main">
+<!-- <div class="container-fluid main">
   <div class="custom-container">
     <div class="navbar-div">
       <div class="logo-div">
@@ -14,4 +14,34 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
+
+
+  <div class="section">
+    <div class="custom-container">
+      <div class="navbar">
+        <div class="logo" >
+          Besnik Beka
+        </div>
+        <div class="mobile-menu" [class.open]="isMenuOpen" [class.close]="!isMenuOpen">
+          <div class="nav-list">
+            <ul class="header-nav">
+              <li class="nav-li"><a routerLinkActive="bold-text"  >Home</a></li>
+              <li  class="nav-li"><a routerLinkActive="bold-text">Contact</a></li>
+              <li  class="nav-li"><a routerLinkActive="bold-text" >Blogs</a></li>
+            
+            </ul>
+          </div>
+        </div>
+        <button (click)="toggleMenu()" [ngClass]="isMenuOpen ? 'button-open' : 'button-close'">
+          <div class="ham-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </button>
+      </div>
+    </div>
+  </div>
+
+
