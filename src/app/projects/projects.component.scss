@@ -82,3 +82,20 @@
 
     }
 }
+
+@media only screen and (max-width: 768px) {
+    .main{
+        padding: 0 16px;
+        margin: 60px 0 60px 0;
+    }
+    .project-div{
+        flex-direction: column;
+        row-gap: 20px;
+        .project-img{
+            max-width: 100%!important;
+        }
+        .project-info{
+            max-width: 100%!important;
+        }
+    }
+}

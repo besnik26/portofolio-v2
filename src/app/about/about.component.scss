@@ -31,3 +31,13 @@
     }
   }
 }
+
+@media only screen and (max-width: 768px) {
+  .main{
+    margin-top: 70px;
+    padding: 0 16px;
+    .about-section{
+      flex-direction: column-reverse;
+    }
+  }
+}
