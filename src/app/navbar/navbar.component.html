@@ -1,34 +1,16 @@
-<!-- <div class="container-fluid main">
-  <div class="custom-container">
-    <div class="navbar-div">
-      <div class="logo-div">
-        <h4>Besnik Beka</h4>
-      </div>
-
-      <div class="list-div">
-        <ul>
-          <li>Home</li>
-          <li>About</li>
-          <li>Projects</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div> -->
-
 
   <div class="section">
     <div class="custom-container">
       <div class="navbar">
-        <div class="logo" >
+        <div class="logo" (click)="scrollToSection('home')">
           Besnik Beka
         </div>
         <div class="mobile-menu" [class.open]="isMenuOpen" [class.close]="!isMenuOpen">
           <div class="nav-list">
             <ul class="header-nav">
-              <li class="nav-li"><a>Home</a></li>
-              <li  class="nav-li"><a>About</a></li>
-              <li  class="nav-li"><a>Projects</a></li>
+              <li class="nav-li"><a (click)="scrollToSection('home')">Home</a></li>
+              <li  class="nav-li"><a (click)="scrollToSection('about')">About</a></li>
+              <li  class="nav-li"><a (click)="scrollToSection('projects')">Projects</a></li>
             
             </ul>
           </div>

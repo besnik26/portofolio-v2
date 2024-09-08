@@ -1,5 +1,5 @@
 import {CommonModule, NgOptimizedImage} from '@angular/common';
-import {Component, ElementRef, HostListener} from '@angular/core';
+import {Component, ElementRef, HostListener, Output, EventEmitter} from '@angular/core';
 import {NgClass} from "@angular/common";
 
 
@@ -12,9 +12,6 @@ import {NgClass} from "@angular/common";
 })
 export class NavbarComponent {
   activeLang: any;
-  isDropdownOpen: boolean = false;
-  isSecondDropdownOpen:boolean = false;
-  isLangDropdownOpen:boolean = false;
   isMenuOpen: boolean = false;
   constructor(){
 
@@ -23,8 +20,23 @@ export class NavbarComponent {
   
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
-    this.isDropdownOpen = false;
-    this.isSecondDropdownOpen = false;
-    this.isLangDropdownOpen = false;
   }
+
+  @Output() scrollTo = new EventEmitter<string>();
+
+  scrollToSection(sectionId: string) {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const screenWidth = window.innerWidth;
+      const offset = screenWidth < 768 ? -100 : -200;
+      this.toggleMenu();
+      const yPosition = element.getBoundingClientRect().top + window.pageYOffset + offset;
+      window.scrollTo({ top: yPosition, behavior: 'smooth' });
+    }
+  }
+ 
+
+
 }
+
+  
