@@ -24,6 +24,7 @@
             padding: 25px 20px;
             border-radius: 20px;
             max-width: 800px;
+            margin-bottom: 110px;
             .project-img{
                 max-width: 60%;
                 img{
@@ -91,6 +92,7 @@
     .project-div{
         flex-direction: column;
         row-gap: 20px;
+        margin-bottom: 70px;
         .project-img{
             max-width: 100%!important;
         }
