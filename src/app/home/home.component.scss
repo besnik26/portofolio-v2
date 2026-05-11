@@ -1,10 +1,12 @@
 .main{
   display: flex;
   justify-content: center;
-  margin-top: 150px;
+  margin: 140px 0 300px 0;
+  overflow-x: clip;
   .custom-container{
     max-width: 1200px;
     width: 100%;
+    margin-top: 100px;
     .home-parent{
       max-width: 900px;
       margin: 0 auto;
@@ -17,6 +19,9 @@
       max-width: 900px;
       margin: 0 auto;
       .info-section{
+        h1{
+          color: #09e6f9;
+        }
         p{
           color: #9e9e9e;
           margin: 15px 0 35px 0;
@@ -24,26 +29,39 @@
         .socials-div{
           display: flex;
           align-items: center;
-          column-gap: 20px;
-          .images{
-            display: flex;
-            column-gap: 20px;
-          }
+          gap: 10px;
+          
           img{
             width: 27.5px;
             height: auto;
-            cursor: pointer;
           }
-          .cv-button{
-            color: white;
-            background-color: black;
-            padding: 5px 15px;
-            border-radius: 16px;
-            border: none;
+          a{
             display: flex;
             align-items: center;
+            text-decoration: none;
             column-gap: 5px;
+            background-color: black;
+            padding: 8px 14px;
+            border-radius: 5px;
+            box-shadow: 0 6px #09e6f9;
+            min-width: 115px;
+            transition: 0.1s;
+            &:hover{
+              box-shadow: 0 2px #09e6f9;
+              transform: translateY(4px);
+
+            }
+            &:active{
+              box-shadow: 0 2px #09e6f9;
+              transform: translateY(4px);
+            }
+
+            span{
+              color: #09e6f9;
+            }
           }
+
+          
         }
       }
       .profile-section{
@@ -53,8 +71,10 @@
           animation: borderAnimation 7s infinite linear;
           height: auto;
           border-radius: 50px;
-          box-shadow: rgba(30, 39, 68, 0.5)  20px 20px 70px;
-          border: 2px solid #2e4266;
+          box-shadow: rgba(9, 230, 249, 0.5)  0px 0px 18px;
+          // border: 2px solid #133e42;
+          max-height: 420px;
+          color: rgb(9, 230, 249);
         }
       }
 
@@ -78,60 +98,37 @@
           border-radius:250px 350px 350px 350px;
         }
       }
-    }
-
-    .tech-stack-section{
-      display: flex;
-      justify-content: start;
-      align-items: center;
-      margin-top: 90px;
-      column-gap: 40px;
-      h4{
-        margin: 0;
-      }
-      .tech-stack-logos{
-        display: flex;
-        column-gap: 25px;
-        img{
-          width: 45px;
-          height: auto;
-        }
-      }
+      
+      
     }
   }
 }
 @media only screen and (max-width: 768px) {
   .main{
     padding: 0 16px;
-  }
-  .home-section{
-    flex-direction: column-reverse;
-    align-items: center;
-    row-gap: 40px;
-    .info-section{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      .socials-div{
-        flex-direction: column;
-        row-gap: 20px;
-      }
-    }
-
-    
-  }
-  .tech-stack-section{
-    flex-direction: column;
-    align-items: center;
-    margin-top: 50px!important;
-    row-gap: 30px;
-    .tech-stack-logos{
-      flex-wrap: wrap;
-      justify-content: center;
-      row-gap: 25px;
-      img{
-        width: 90px!important;
+    margin: 120px 0px 270px 0px;
+    .custom-container{
+      margin-top: 0px;
+      .home-section{
+        flex-direction: column-reverse;
+        align-items: center;
+        row-gap: 40px;
+        .info-section{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          .socials-div{
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+          }
+        }
+        .profile-section{
+          img{
+            max-height: 340px;
+          }
+        }
       }
     }
   }

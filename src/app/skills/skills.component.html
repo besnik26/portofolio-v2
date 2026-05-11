@@ -1,0 +1,14 @@
+<section class="d-flex justify-content-center">
+    <div class="custom-container">
+        <h1 appScrollReveal>Tech Stack/Skills</h1>
+        <div class="skill-container" >
+
+            @for (skill of skills; track $index) {
+                <div class="skill" appScrollReveal>
+                    <img src="{{skill.imgPath}}" alt="">
+                    <p>{{skill.name}}</p>
+                </div>
+            }
+        </div>
+    </div>
+</section>

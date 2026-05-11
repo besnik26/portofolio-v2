@@ -1,27 +1,28 @@
 
   <div class="section">
     <div class="custom-container">
-      <div class="navbar">
+      <div class="navbar" [class.open]="isMenuOpen" >
         <div class="logo" (click)="scrollToSection('home')">
           Besnik Beka
         </div>
-        <div class="mobile-menu" [class.open]="isMenuOpen" [class.close]="!isMenuOpen">
+        <div class="mobile-menu" >
           <div class="nav-list">
             <ul class="header-nav">
               <li class="nav-li"><a (click)="scrollToSection('home')">Home</a></li>
               <li  class="nav-li"><a (click)="scrollToSection('about')">About</a></li>
+              <li  class="nav-li"><a (click)="scrollToSection('skills')">Skills</a></li>
               <li  class="nav-li"><a (click)="scrollToSection('projects')">Projects</a></li>
             
             </ul>
           </div>
         </div>
-        <button (click)="toggleMenu()" [ngClass]="isMenuOpen ? 'button-open' : 'button-close'">
-          <div class="ham-menu">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </button>
+        <app-custom-button 
+          [isMenuOpen]="isMenuOpen"
+          (toggleMenuEvent)="toggleMenu()"
+          class="btnComponent">
+        
+        </app-custom-button>
+        
       </div>
     </div>
   </div>
