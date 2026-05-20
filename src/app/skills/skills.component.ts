@@ -38,18 +38,18 @@ export class SkillsComponent {
       name:'REACT',
       imgPath:'assets/images/stack/react.svg'
     },
-    {
-      name:'NODE JS',
-      imgPath:'assets/images/stack/nodejs.svg'
-    },
-    {
-      name:'EXPRESS JS',
-      imgPath:'assets/images/stack/express.svg'
-    },
-    {
-      name:'MONGO DB',
-      imgPath:'assets/images/stack/mongodb.svg'
-    },
+    // {
+    //   name:'NODE JS',
+    //   imgPath:'assets/images/stack/nodejs.svg'
+    // },
+    // {
+    //   name:'EXPRESS JS',
+    //   imgPath:'assets/images/stack/express.svg'
+    // },
+    // {
+    //   name:'MONGO DB',
+    //   imgPath:'assets/images/stack/mongodb.svg'
+    // },
     
   ]
 }
