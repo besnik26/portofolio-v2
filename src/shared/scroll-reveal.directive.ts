@@ -33,7 +33,7 @@ export class ScrollRevealDirective implements AfterViewInit{
       });
 
     }, {
-      threshold: 0.2
+      threshold: 0
     });
 
     observer.observe(this.el.nativeElement);
