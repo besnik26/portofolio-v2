@@ -11,7 +11,7 @@ export class ProjectComponent {
   @Input() title!: string;
   @Input() description!: string;
   @Input() imageSrc!: string;
-  @Input() stackImages!: string[]; 
+  @Input() stack!: string[]; 
   @Input() codeLink!: string;
   @Input() demoLink!: string;
 }

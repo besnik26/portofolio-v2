@@ -6,9 +6,9 @@
       <h3>{{ title }}</h3>
       <p>{{ description }}</p>
       <div class="stack">
-        @for (stackImage of stackImages; track stackImage) {
-          <div class="img-div">
-            <img [src]="stackImage" alt="Stack Image">
+        @for (stackName of stack; track stackName) {
+          <div class="stack-div">
+            <p>{{stackName}}</p>
           </div>
         }
       </div>
@@ -19,12 +19,14 @@
             <img src="../../assets/images/github-cyan.svg" alt="GitHub Logo">
           </div>
         </a>
-        <a [href]="demoLink" target="_blank" class="cover">
-          <h4>Live Demo</h4>
-          <div class="img-div">
-            <img src="../../assets/images/project-images/new-tab-cyan.svg" alt="Live Demo Logo">
-          </div>
-        </a>
+        @if(demoLink){
+          <a [href]="demoLink" target="_blank" class="cover">
+            <h4>Live Demo</h4>
+            <div class="img-div">
+              <img src="../../assets/images/project-images/new-tab-cyan.svg" alt="Live Demo Logo">
+            </div>
+          </a>
+        }
       </div>
     </div>
   </div>
